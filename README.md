@@ -29,16 +29,33 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 - Calculate three-month moving averages to smooth fluctuations and support reliable forecasting. *Using AVG() OVER() function*
 ## Database Schema
 Description of Inventory, Customers, and Sales tables.
-''' [Define Queries](SQL_Queries/create_customer.sql) '''
+[Define Queries](SQL_Queries/create_customer.sql)
+
 ![Description](Screenshots/customers_desc.png)
+
 [Define Queries](SQL_Queries/create_inv.sql)
+
 ![Description](Screenshots/inventory_desc.png)
+
 [Define Queries](SQL_Queries/create_sales.sql)
+
 ![Description](Screenshots/sales_desc.png)
-(Insert ER diagram image)
+
+![ER Diagram](Screenshots/ER_dia.png)
 ## Part A: SQL JOIN Queries
 1. INNER JOIN
 [JOIN Queries](SQL_Queries/inner_join.sql)
+
+''' sql
+-- Combines customers with their completed transactions, returning only records where both customer and sales data exist.
+SELECT s.Sale_ID,
+       c.C_Name AS Customer_Name,
+       i.Model_Yr,
+       s.Sale_Price
+FROM Sales s
+INNER JOIN Customers c ON s.Customer_ID = c.Customer_ID
+INNER JOIN Inventory i ON s.Car_ID = i.Car_ID;
+
 ![Join screenshot](Screenshots/inner_join.png)
 Business interpretation: Shows active customers generating revenue, helping leadership focus on proven revenue contributors.
 3. LEFT JOIN
