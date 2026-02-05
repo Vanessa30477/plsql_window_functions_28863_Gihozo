@@ -1,3 +1,4 @@
+-- Divides customers into four equal-sized spending groups (quartiles).
 SELECT Customer_ID,
        Customer_Name,
        Total_Spent,
