@@ -1,3 +1,4 @@
+-- Displays all cars, that are not linked to a registered customer record.
 SELECT i.Car_ID,
        i.Manufacturer,
        i.Model_Yr
