@@ -29,7 +29,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 - Calculate three-month moving averages to smooth fluctuations and support reliable forecasting. *Using AVG() OVER() function*
 ## Database Schema
 Description of Inventory, Customers, and Sales tables.
-[Define Queries](SQL_Queries/create_customer.sql)
+''' [Define Queries](SQL_Queries/create_customer.sql) '''
 ![Description](Screenshots/customers_desc.png)
 [Define Queries](SQL_Queries/create_inv.sql)
 ![Description](Screenshots/inventory_desc.png)
