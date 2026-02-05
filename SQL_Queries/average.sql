@@ -1,3 +1,4 @@
+-- Calculates cumulative average customer spending.
 SELECT c.Customer_ID,
        c.C_Name,
        s.Sale_Price,
