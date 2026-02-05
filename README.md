@@ -1,8 +1,12 @@
 # Car Sales Analysis Using SQL JOINs & Window Functions
 
 ## Business Problem
-Brief explanation of the car sales business challenge.
-
+### Business Context
+A car dealership manages inventory, customers, and sales transactions across different car models, price ranges, and time periods. Management needs clear, data-driven insights to understand sales performance, customer behavior, and inventory efficiency in order to improve profitability and operational decisions.
+### Data Challenge
+Raw transactional data alone does not reveal trends, rankings, or customer patterns. Without combining tables and analyzing sales over time, the business cannot identify top-performing vehicles, inactive customers, or seasonal sales behavior.
+### Expected Outcome
+This analysis is expected to support better pricing strategies, customer targeting, and inventory planning by using SQL JOINs and Window Functions to extract meaningful insights from relational data.
 ## Database Schema
 Description of Inventory, Customers, and Sales tables.
 (Insert ER diagram image)
@@ -37,4 +41,4 @@ Description of Inventory, Customers, and Sales tables.
 Oracle SQL Documentation
 
 ## Integrity Statement
-“All sources were properly cited. Implementations and analysis represent original work.”
+All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation
