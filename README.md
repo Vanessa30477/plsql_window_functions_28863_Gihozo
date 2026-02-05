@@ -1,13 +1,14 @@
 # Using SQL JOINs & Window Functions Assignment - Car Sales Analysis
-**Course:** Database Development with PL/SQL
-
-**Instuctor:** Eric MANIRAGUHA
-
-**Wednesday-Group A**
 
 **Names:** GIHOZO UWASE Vanessa
 
 **Student_ID:** 28863
+
+**Instuctor:** Eric MANIRAGUHA
+
+**Course:** Database Development with PL/SQL
+
+**Wednesday-Group A**
 
 **Date:** 6th February 2026
 
@@ -28,7 +29,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 - Segment customers into four spending-based quartiles for targeted marketing strategies. *Using NTILE(4)*
 - Calculate three-month moving averages to smooth fluctuations and support reliable forecasting. *Using AVG() OVER() function*
 ## Database Schema
-- Description of [Customers Table](SQL_Queries/create_customer.sql)
+- **Description of [Customers Table](SQL_Queries/create_customer.sql)**
 
 ![Description](Screenshots/customers_desc.png) 
 
@@ -36,7 +37,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ![Description](Screenshots/customerss.png) 
 
-- Description of [Inventoty Table](SQL_Queries/create_inv.sql)
+- **Description of [Inventoty Table](SQL_Queries/create_inv.sql)**
 
 ![Description](Screenshots/inventory_desc.png)
 
@@ -44,7 +45,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ![Description](Screenshots/inventorie.png)
 
-- Description of [Sales Table](SQL_Queries/create_sales.sql)
+- **Description of [Sales Table](SQL_Queries/create_sales.sql)**
 
 ![Description](Screenshots/sales_desc.png)
 
@@ -58,7 +59,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ## Part A: SQL JOIN Queries
 
-1. INNER JOIN
+**1. INNER JOIN**
 
 ```sql
 -- Combines customers with their completed transactions, returning only records where both customer and sales data exist.
@@ -75,7 +76,7 @@ INNER JOIN Inventory i ON s.Car_ID = i.Car_ID;
 
 **Business interpretation:** Shows active customers generating revenue, helping leadership focus on proven revenue contributors.
 
-2. LEFT JOIN
+**2. LEFT JOIN**
 
 ```sql
 -- Returns all customers without any recorded purchases.
@@ -90,7 +91,7 @@ WHERE s.Sale_ID IS NULL;
 
 **Business interpretation:** Identifies inactive or untapped customers, highlighting opportunities for re-engagement and growth.
 
-3. RIGHT JOIN
+**3. RIGHT JOIN**
 
 ```sql
 -- Displays all cars, that are not linked to a registered customer record.
@@ -106,7 +107,7 @@ WHERE s.Sale_ID IS NULL;
 
 **Business interpretation:** Exposes data capture gaps, supporting improvements in customer tracking and reporting accuracy.
 
-4. FULL OUTER JOIN
+**4. FULL OUTER JOIN**
 
 ```sql
 -- Combines all customers and all transactions, regardless of matching records.
@@ -121,7 +122,7 @@ FULL OUTER JOIN Inventory i ON s.Car_ID = i.Car_ID;
 
 **Business interpretation:** Provides a complete business view, revealing both missing customers and missing sales links.
 
-5. SELF JOIN
+**5. SELF JOIN**
 
 ```sql
 -- Compares customers within the same table to identify shared attributes which is region.
@@ -139,9 +140,9 @@ JOIN Customers c2
 
 ## Part B: Window Functions
 
-1. Ranking Functions
+### 1. Ranking Functions
 
-- ROW_NUMBER()
+- **ROW_NUMBER()**
 
 ```sql
 -- Assigns a unique sequential number to each customer transaction within a defined group(Sales number).
@@ -159,7 +160,7 @@ ORDER BY c.C_name, s.sale_date;
 
 **Business Interpretation:** This allows us to track first-time vs repeat purchases, giving insight into customer loyalty and lifecycle stages. Executives can measure how well the business converts new customers into repeat buyers.
 
-- RANK()
+- **RANK()**
 
 ```sql
 -- Ranks customers based on spending value, without ties.
@@ -174,7 +175,7 @@ JOIN Inventory i ON s.Car_ID = i.Car_ID;
 
 **Business interpretation:** This highlights top-spending customers, helping leadership prioritize VIP retention strategies and personalized offerings that protect and grow high-value revenue streams.
 
-- DENSE_RANK()
+- **DENSE_RANK()**
 
 ```sql
 -- Ranks customers without gaps in purchase ranking values.
@@ -191,7 +192,7 @@ GROUP BY c.Customer_ID, c.C_Name;
 
 **Business interpretation:** This ensures fair segmentation of customers by value, enabling precise reward tiers and loyalty programs without artificial ranking gaps that could distort performance reporting.
 
-- PERCENT_RANK()
+- **PERCENT_RANK()**
 
 ```sql
 -- Calculates a customer’s relative position compared to all other customers in percentages.
@@ -209,9 +210,9 @@ ORDER BY total_revenue DESC;
 
 **Business interpretation:** This shows how customers perform relative to the entire base, allowing executives to quickly identify whether a customer is in the top or bottom performance percentile and allocate resources accordingly.
 
-2. Aggregate Window Functions
+### 2. Aggregate Window Functions
 
-- SUM() OVER()
+- **SUM() OVER()**
 
 ```sql
 -- Computes cumulative or rolling customer revenue over time using defined row frames.
@@ -233,7 +234,7 @@ JOIN Inventory i
 
 **Business interpretation:** This tracks customer lifetime value growth, helping leadershiP assess whether customer relationships are becoming more profitable and whether retention strategies are working.
 
-- AVG() OVER()
+- **AVG() OVER()**
 
 ```sql
 -- Calculates cumulative average customer spending.
@@ -249,7 +250,7 @@ JOIN Sales s ON c.Customer_ID = s.Customer_ID;
 
 **Business interpretation:** This smooths out short-term fluctuations to reveal true spending behavior trends, enabling informed decisions about pricing, promotions, and long-term revenue forecasting.
 
-- MIN() OVER()/MAX() OVER()
+- **MIN() OVER()/MAX() OVER()**
 
 ```sql
 -- Identifies minimum and maximum transaction values per customer.
@@ -268,9 +269,9 @@ ORDER BY i.manufacturer, s.sale_date;
 
 **Business interpretation:** This reveals customer spending boundaries, helping leadership understand risk, detect unusually low or high transactions, and refine customer segmentation strategies.
 
-3. Navigation Functions
+### 3. Navigation Functions
 
-- LAG()
+- **LAG()**
 
 ```sql
 -- Compares a customer’s current transaction to their previous transaction.
@@ -294,7 +295,7 @@ ORDER BY Sale_Month;
 
 **Business interpretation:** This measures changes in customer behavior over time, signaling whether customers are increasing or decreasing their spending a critical early indicator of churn or growth potential.
 
-- LEAD
+- **LEAD()**
 
 ```sql
 -- Compares a customer’s current transaction with their next transaction.
@@ -314,9 +315,9 @@ JOIN Sales s ON c.Customer_ID = s.Customer_ID;
 
 **Business interpretation:** This supports predictive analysis, allowing management to anticipate future customer behavior and proactively intervene to retain or upsell customers.
 
-4. Distribution Functions
+### 4. Distribution Functions
 
-- NTILE(4)
+- **NTILE(4)**
 
 ```sql
 -- Divides customers into four equal-sized spending groups (quartiles).
@@ -345,7 +346,7 @@ FROM (
 
 **Business interpretation:** This creates clear customer value tiers, enabling leadership to focus investment on top-quartile customers while designing growth strategies for mid- and low-tier segments.
 
-- CUME_DIST()
+- **CUME_DIST()**
 
 ```sql
 -- Calculates the cumulative distribution of customer spending.
