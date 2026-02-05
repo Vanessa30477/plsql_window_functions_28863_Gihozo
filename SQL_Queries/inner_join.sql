@@ -1,3 +1,4 @@
+-- Combines customers with their completed transactions, returning only records where both customer and sales data exist.
 SELECT s.Sale_ID,
        c.C_Name AS Customer_Name,
        i.Model_Yr,
