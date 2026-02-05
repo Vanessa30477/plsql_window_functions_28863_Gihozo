@@ -1,3 +1,4 @@
+-- Compares customers within the same table to identify shared attributes which is region.
 SELECT c1.C_Name AS Customer1,
        c2.C_Name AS Customer2,
        c1.Address
