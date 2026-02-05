@@ -1,3 +1,4 @@
+-- Calculates the cumulative distribution of customer spending.
 SELECT c.Customer_ID,
        c.C_Name,
        SUM(s.Sale_Price) AS Total_Spent,
