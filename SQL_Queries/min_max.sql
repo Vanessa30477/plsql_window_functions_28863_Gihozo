@@ -1,3 +1,4 @@
+-- Identifies minimum and maximum transaction values per customer.
 SELECT 
     i.Manufacturer AS Car_Type,
     s.sale_date,
