@@ -76,7 +76,7 @@ Business interpretation: This shows how customers perform relative to the entire
 2. Aggregate Window Functions
 - SUM() OVER()
 [Window Functions Queries](SQL_Queries/sum.sql)
-Business interpretation: This tracks customer lifetime value growth, helping leadership assess whether customer relationships are becoming more profitable and whether retention strategies are working.
+Business interpretation: This tracks customer lifetime value growth, helping leadershiP assess whether customer relationships are becoming more profitable and whether retention strategies are working.
 - AVG() OVER()
 [Window Functions Queries](SQL_Queries/average.sql)
 Business interpretation: This smooths out short-term fluctuations to reveal true spending behavior trends, enabling informed decisions about pricing, promotions, and long-term revenue forecasting.
