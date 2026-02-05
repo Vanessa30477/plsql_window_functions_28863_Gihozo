@@ -1,3 +1,4 @@
+-- Defining Sales table and adding foreign keys.
 CREATE TABLE Sales (
     Sale_ID NUMBER PRIMARY KEY,
     Car_ID NUMBER,
