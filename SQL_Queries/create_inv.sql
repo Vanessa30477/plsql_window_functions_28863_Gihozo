@@ -1,3 +1,4 @@
+-- Defining inventory table.
 CREATE TABLE Inventory (
     Car_ID NUMBER PRIMARY KEY,
     Manufacturer VARCHAR2(50),
