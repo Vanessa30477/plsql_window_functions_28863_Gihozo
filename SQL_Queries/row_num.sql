@@ -1,3 +1,4 @@
+-- Assigns a unique sequential number to each customer transaction within a defined group(Sales number).
 SELECT 
     c.C_name AS Customer_Name,
     s.sale_date,
