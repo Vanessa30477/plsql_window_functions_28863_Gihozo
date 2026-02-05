@@ -46,7 +46,7 @@ Description of Inventory, Customers, and Sales tables.
 1. INNER JOIN
 [JOIN Queries](SQL_Queries/inner_join.sql)
 
-''' sql
+```sql
 -- Combines customers with their completed transactions, returning only records where both customer and sales data exist.
 SELECT s.Sale_ID,
        c.C_Name AS Customer_Name,
@@ -55,6 +55,7 @@ SELECT s.Sale_ID,
 FROM Sales s
 INNER JOIN Customers c ON s.Customer_ID = c.Customer_ID
 INNER JOIN Inventory i ON s.Car_ID = i.Car_ID;
+```
 
 ![Join screenshot](Screenshots/inner_join.png)
 Business interpretation: Shows active customers generating revenue, helping leadership focus on proven revenue contributors.
