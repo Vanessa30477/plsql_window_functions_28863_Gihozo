@@ -1,3 +1,4 @@
+-- Calculates a customer’s relative position compared to all other customers in percentages.
 SELECT 
     i.manufacturer AS Car_Type,
     SUM(s.sale_price) AS Total_revenue,
