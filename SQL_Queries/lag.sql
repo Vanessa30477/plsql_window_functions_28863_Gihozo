@@ -1,3 +1,4 @@
+-- Compares a customer’s current transaction to their previous transaction.
 SELECT
     Sale_Month,
     Monthly_Sales,
