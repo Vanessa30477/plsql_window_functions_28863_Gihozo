@@ -1,3 +1,4 @@
+-- Computes cumulative or rolling customer revenue over time using defined row frames.
 SELECT 
     s.Sale_Date,
     s.Sale_Price,
