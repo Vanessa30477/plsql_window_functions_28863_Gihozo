@@ -1,3 +1,4 @@
+-- Ranks customers based on spending value, without ties.
 SELECT i.Manufacturer,
        i.Model_Yr,
        s.Sale_Price,
