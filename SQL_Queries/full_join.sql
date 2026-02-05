@@ -1,3 +1,4 @@
+-- Combines all customers and all transactions, regardless of matching records.
 SELECT c.C_Name AS Customer_Name,
        i.Model_Yr
 FROM Customers c
