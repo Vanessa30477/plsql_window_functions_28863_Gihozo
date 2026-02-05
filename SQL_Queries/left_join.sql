@@ -1,3 +1,4 @@
+-- Returns all customers without any recorded purchases.
 SELECT c.Customer_ID,
        c.C_Name
 FROM Customers c
