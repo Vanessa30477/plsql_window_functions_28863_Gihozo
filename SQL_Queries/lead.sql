@@ -1,3 +1,4 @@
+-- Compares a customer’s current transaction with their next transaction.
 SELECT 
        c.C_Name,
        s.Sale_Date,
