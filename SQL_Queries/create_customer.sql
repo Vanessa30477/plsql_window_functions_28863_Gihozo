@@ -1,3 +1,4 @@
+-- Defining Customers table.
 CREATE TABLE Customers (
     Customer_ID NUMBER PRIMARY KEY,
     Name VARCHAR2(100),
