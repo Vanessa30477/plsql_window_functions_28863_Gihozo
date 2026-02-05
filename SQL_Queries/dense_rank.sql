@@ -1,3 +1,4 @@
+-- Ranks customers without gaps in purchase ranking values.
 SELECT c.Customer_ID,
        c.C_Name,
        SUM(s.Sale_Price) AS Total_Spent,
