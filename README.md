@@ -4,7 +4,7 @@
 
 **Student_ID:** 28863
 
-**Instuctor:** Eric MANIRAGUHA
+**Lecturer:** Eric MANIRAGUHA
 
 **Course:** Database Development with PL/SQL
 
@@ -33,7 +33,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ![Description](Screenshots/customers_desc.png) 
 
-**Customers Table Structure**
+**Customers Table Details**
 
 ![Description](Screenshots/customerss.png) 
 
@@ -41,7 +41,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ![Description](Screenshots/inventory_desc.png)
 
-**Inventory Table Sctucture**
+**Inventory Table Details**
 
 ![Description](Screenshots/inventorie.png)
 
@@ -49,7 +49,7 @@ The company struggles to identify *unsold cars*, *inactive customers*, *sales tr
 
 ![Description](Screenshots/sales_desc.png)
 
-**Sales Table Structure**
+**Sales Table Details**
 
 ![Description](Screenshots/saless.png)
 
